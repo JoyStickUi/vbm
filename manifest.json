@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "test ext",
+    "version": "1.0",
+    "icons": {
+        "1": "img.jpg"
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": ["*://*/*"],
+            "js": ["app.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": [
+        "tabs", "<all_urls>"
+    ],
+    "browser_action": {
+        "default_title": "test ext",
+        "default_icon": "img.jpg",
+        "default_popup": "popup.html"
+    }
+}
