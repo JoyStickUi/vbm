@@ -1,26 +1,26 @@
 {
     "manifest_version": 2,
-    "name": "test ext",
+    "name": "Vk Better Messages",
     "version": "1.0",
     "icons": {
-        "1": "img.jpg"
+        "1": "common.blocks/img.jpg"
     },
     "content_scripts": [
         {
             "run_at": "document_end",
             "matches": ["*://*/*"],
-            "js": ["app.js"]
+            "js": ["common.blocks/app/app.js"]
         }
     ],
     "background": {
-        "scripts": ["background.js"]
+        "scripts": ["common.blocks/background/background.js"]
     },
     "permissions": [
         "tabs", "<all_urls>"
     ],
     "browser_action": {
-        "default_title": "test ext",
-        "default_icon": "img.jpg",
-        "default_popup": "popup.html"
+        "default_title": "Vk Better Messages",
+        "default_icon": "common.blocks/img.jpg",
+        "default_popup": "common.blocks/popup/popup.html"
     }
 }

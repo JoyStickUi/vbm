@@ -13,7 +13,7 @@ function start(){
         if(event.target.closest("li.nim-dialog").classList.contains("nim-dialog")) EmReplace();
     });
     
-    document.querySelector('.im_editable').addEventListener('keydown', (event)=>{
+    document.querySelector('.im_editable').addEventListener('Enter', (event)=>{
         if(event.key.toLocaleLowerCase() == "enter") EmReplace();
     });
 }
